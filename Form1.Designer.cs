@@ -78,7 +78,7 @@
             // 
             this.ufo.BackColor = System.Drawing.Color.Transparent;
             this.ufo.Image = global::Helicopter_Game.Properties.Resources.alien1;
-            this.ufo.Location = new System.Drawing.Point(575, 133);
+            this.ufo.Location = new System.Drawing.Point(638, 99);
             this.ufo.Name = "ufo";
             this.ufo.Size = new System.Drawing.Size(68, 72);
             this.ufo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
