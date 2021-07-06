@@ -255,7 +255,7 @@ namespace Helicopter_Game
             // create a new picture box class to the form
 
             bullet.BackColor = System.Drawing.Color.DarkOrange;
-            // set the colour of the bullet to dark organge
+            // set the colour of the bullet to dark orange
 
             bullet.Height = 5;
             // set bullet height to 5 pixels
