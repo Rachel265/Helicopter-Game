@@ -34,6 +34,55 @@ namespace Helicopter_Game
 
         }
 
+        private void keyisdown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                // if the player has pressed down the up key
+                // we change the go up to true
+                goup = true;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                // if the player has pressed down the down key
+                // we change the go down to true
+                godown = true;
+            }
+
+            if (e.KeyCode == Keys.Space && shot == false)
+            {
+                // if the player has pressed down space key
+                // AND shot boolean is false when they did
+                // then we run the make bullet function
+                // and change the shot from false to true
+                makeBullet();
+                shot = true;
+            }
+        }
+
+        private void keyisup(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                // if the player has left the up key
+                // change go up to false
+                goup = false;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                // if the player has left the down key
+                // change go down to false
+                godown = false;
+            }
+
+            if (shot == true)
+            {
+                //if shot variable is true 
+                // we change it false so the player will have to shoot again
+                // for more bullet. 
+                shot = false;
+            }
+        }
         private void gametick(object sender, EventArgs e)
         {
             {
@@ -162,58 +211,69 @@ namespace Helicopter_Game
                     }
                 }
             }
+        }
 
-        private void keyisdown(object sender, KeyEventArgs e)
+  
+
+        private void changeUFO()
         {
-            if (e.KeyCode == Keys.Up)
+            index += 1; // increase index by 1
+
+            if (index > 3)
             {
-                // if the player has pressed down the up key
-                // we change the go up to true
-                goup = true;
-            }
-            if (e.KeyCode == Keys.Down)
-            {
-                // if the player has pressed down the down key
-                // we change the go down to true
-                godown = true;
+                // if indexes value is greater than 3
+                // set it back to 1
+                index = 1;
             }
 
-            if (e.KeyCode == Keys.Space && shot == false)
+            // we will use the switch statement to switch between alien images
+            // by using the number in index we can switch them effectively
+            // when the numbers in index change this switch statement will follow
+            switch (index)
             {
-                // if the player has pressed down space key
-                // AND shot boolean is false when they did
-                // then we run the make bullet function
-                // and change the shot from false to true
-                makeBullet();
-                shot = true;
-            }
-        }
-
-            private void makeBullet()
-            {
-                PictureBox bullet = new PictureBox();
-                // create a new picture box class to the form
-
-                bullet.BackColor = System.Drawing.Color.DarkOrange;
-                // set the colour of the bullet to dark organge
-
-                bullet.Height = 5;
-                // set bullet height to 5 pixels
-
-                bullet.Width = 10;
-                // set bullet width to 10 pixels
-
-                bullet.Left = player.Left + player.Width;
-                // bullet will place in front of player object
-
-                bullet.Top = player.Top + player.Height / 2;
-                // bullet will be middle of player object
-
-                bullet.Tag = "bullet";
-                // set the tag for the object to bullet
-
-                this.Controls.Add(bullet);
-                // finally adding the picture box bullet to the scene
+                // if the number in index is 1
+                // then we will show the alien 1 skin on UFO picture Box
+                case 1:
+                    ufo.Image = Properties.Resources.alien1;
+                    break;
+                // if the number in index is 2
+                // then we will show the alien 2 skin on UFO picture Box
+                case 2:
+                    ufo.Image = Properties.Resources.alien2;
+                    break;
+                // if the number in index is 3
+                // then we will show the alien 3 skin on UFO picture Box
+                case 3:
+                    ufo.Image = Properties.Resources.alien3;
+                    break;
             }
         }
+
+        private void makeBullet()
+        {
+            PictureBox bullet = new PictureBox();
+            // create a new picture box class to the form
+
+            bullet.BackColor = System.Drawing.Color.DarkOrange;
+            // set the colour of the bullet to dark organge
+
+            bullet.Height = 5;
+            // set bullet height to 5 pixels
+
+            bullet.Width = 10;
+            // set bullet width to 10 pixels
+
+            bullet.Left = player.Left + player.Width;
+            // bullet will place in front of player object
+
+            bullet.Top = player.Top + player.Height / 2;
+            // bullet will be middle of player object
+
+            bullet.Tag = "bullet";
+            // set the tag for the object to bullet
+
+            this.Controls.Add(bullet);
+            // finally adding the picture box bullet to the scene
+        }
+    }
 }
