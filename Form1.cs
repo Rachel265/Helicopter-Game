@@ -16,13 +16,16 @@ namespace Helicopter_Game
         bool goup; // this is a boolean to allow player to go up
         bool godown; // this is a boolean to allow player to go down
         bool shot = false; // this will check if the player has shot any bullets
+        private bool gameOver;
         int score = 0; // this is a integer for player to keep score
         int speed = 8; // this is the speed of obstacles and ufos
+        private int ufoSpeed;
         Random rand = new Random(); // this is the random class to generate a random number
         int playerSpeed = 7; // this interger will control how fast the player moves
         int index; // this is a empty integer which will be used to change the UFO images
+        private object controls;
 
-
+        public string Score { get; private set; }
 
         public Form1()
         {
@@ -83,6 +86,8 @@ namespace Helicopter_Game
                 shot = false;
             }
         }
+
+
         private void gametick(object sender, EventArgs e)
         {
             {
@@ -248,6 +253,8 @@ namespace Helicopter_Game
                     break;
             }
         }
+
+       
 
         private void makeBullet()
         {
