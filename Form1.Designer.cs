@@ -33,7 +33,7 @@
             this.pillar1 = new System.Windows.Forms.PictureBox();
             this.pillar2 = new System.Windows.Forms.PictureBox();
             this.ufo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pillar1)).BeginInit();
@@ -61,6 +61,7 @@
             this.pillar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pillar1.TabIndex = 1;
             this.pillar1.TabStop = false;
+            this.pillar1.Tag = "pillar";
             // 
             // pillar2
             // 
@@ -71,6 +72,7 @@
             this.pillar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pillar2.TabIndex = 2;
             this.pillar2.TabStop = false;
+            this.pillar2.Tag = "pillar";
             // 
             // ufo
             // 
@@ -83,15 +85,15 @@
             this.ufo.TabIndex = 3;
             this.ufo.TabStop = false;
             // 
-            // label1
+            // txtScore
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "00";
+            this.txtScore.AutoSize = true;
+            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.Location = new System.Drawing.Point(13, 10);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(30, 24);
+            this.txtScore.TabIndex = 4;
+            this.txtScore.Text = "00";
             // 
             // gameTimer
             // 
@@ -105,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(797, 372);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.ufo);
             this.Controls.Add(this.pillar2);
             this.Controls.Add(this.pillar1);
@@ -130,7 +132,7 @@
         private System.Windows.Forms.PictureBox pillar1;
         private System.Windows.Forms.PictureBox pillar2;
         private System.Windows.Forms.PictureBox ufo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Timer gameTimer;
     }
 }
