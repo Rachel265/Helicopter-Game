@@ -18,7 +18,7 @@ namespace Helicopter_Game
         bool shot = false; // this will check if the player has shot any bullets
         private bool gameOver;
         int score = 0; // this is a integer for player to keep score
-        int speed = 8; // this is the speed of obstacles and ufos
+        int speed = 4; // this is the speed of obstacles and ufos
         private int ufoSpeed;
         Random rand = new Random(); // this is the random class to generate a random number
         int playerSpeed = 7; // this interger will control how fast the player moves
@@ -159,7 +159,7 @@ namespace Helicopter_Game
                     // if one of the above is true then we stop the timer
                     gameTimer.Stop();
                     // the game will show the final score to the player in a message box
-                    MessageBox.Show("You failed the mission, you Killed " + score + " Ufo's");
+                    MessageBox.Show("Game Over , you Killed " + score + " Ufo's");
                 }
 
                 // below is a for loop thats checking the components in this form

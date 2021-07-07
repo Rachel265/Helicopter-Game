@@ -55,7 +55,7 @@
             // pillar1
             // 
             this.pillar1.Image = global::Helicopter_Game.Properties.Resources.pillar;
-            this.pillar1.Location = new System.Drawing.Point(338, -6);
+            this.pillar1.Location = new System.Drawing.Point(474, -4);
             this.pillar1.Name = "pillar1";
             this.pillar1.Size = new System.Drawing.Size(56, 150);
             this.pillar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,7 +66,7 @@
             // pillar2
             // 
             this.pillar2.Image = global::Helicopter_Game.Properties.Resources.pillar;
-            this.pillar2.Location = new System.Drawing.Point(495, 246);
+            this.pillar2.Location = new System.Drawing.Point(166, 226);
             this.pillar2.Name = "pillar2";
             this.pillar2.Size = new System.Drawing.Size(56, 146);
             this.pillar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
