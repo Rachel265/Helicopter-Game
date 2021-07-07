@@ -183,7 +183,7 @@ namespace Helicopter_Game
                         if (X.Left > 900)
                         {
                             // then remove x from display
-                            this.Controls.Remove(X);
+                            Controls.Remove(X);
 
                             // dispose the x from the application
                             // we use the dispose method so it doesn't leak memory later on
@@ -255,6 +255,8 @@ namespace Helicopter_Game
         }
 
        
+
+
 
         private void makeBullet()
         {
